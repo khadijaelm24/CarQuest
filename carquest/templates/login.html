@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Se connecter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='login/css/style.css') }}">	
+
+	</head>
+	<body>
+	<section class="ftco-section img bg-hero" style="background-image: url('/static/login/images/bg_1.jpg');">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Bienvenue dans CarQuest</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-11">
+					<div class="wrapper">
+						<div class="row no-gutters justify-content-between">
+							<div class="col-lg-6 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-5">
+									<h3 class="mb-4">Bienvenue cher utilisateur !</h3>
+				        	<!-- <div class="dbox w-100 d-flex align-items-start" style="text-align: justify;">
+				        		Bienvenue sur CarQuest, votre partenaire de confiance <br> pour la gestion de location de
+								voitures ! Que vous soyez <br> un manager ou un admin, notre plateforme a été 
+								conçue <br> pour répondre à tous vos besoins en matière de <br> réservation et de gestion de 
+								véhicules. Avec CarQuest, la <br> réservation de votre voiture idéale devient une tâche <br> aisée, 
+								vous permettant de vous concentrer sur ce qui <br> compte vraiment.
+				          </div> -->
+						  <div class="dbox w-100 d-flex align-items-start" id="textContainer" style="text-align: justify;">
+							Bienvenue sur CarQuest, votre partenaire de confiance pour la gestion de location de
+							voitures ! Que vous soyez un manager ou un admin, notre plateforme a été 
+							conçue pour répondre à tous vos besoins en matière de réservation et de gestion de 
+							véhicules. Avec CarQuest, la réservation de votre voiture idéale devient une tâche aisée, 
+							vous permettant de vous concentrer sur ce qui compte vraiment.
+						</div>
+						
+						<script>
+							const textContainer = document.getElementById('textContainer');
+							const text = textContainer.innerHTML.split('<br>'); // Split le texte par les retours à la ligne
+							textContainer.innerHTML = ''; // Vide le contenu du conteneur
+						
+							let lineIndex = 0;
+							let charIndex = 0;
+							const interval = 1; // Intervalle entre chaque caractère (en millisecondes)
+						
+							const animationInterval = setInterval(() => {
+								if (lineIndex < text.length) {
+									if (charIndex < text[lineIndex].length) {
+										textContainer.innerHTML += text[lineIndex].charAt(charIndex++);
+									} else {
+										textContainer.innerHTML += '<br>'; // Ajoute un retour à la ligne à la fin de la ligne
+										lineIndex++;
+										charIndex = 0;
+									}
+								} else {
+									clearInterval(animationInterval);
+								}
+							}, interval);
+						</script>											
+			          </div>
+							</div>
+							<div class="col-lg-5">
+								<div class="contact-wrap w-100 p-md-5 p-4 bg bg-light">
+									<h3 class="mb-4">Se Connecter</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+									<form method="POST" id="contactForm" name="contactForm">
+										<div class="row">
+											<div class="col-md-12"> 
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email" style="border-radius:8px;">
+												</div>
+											</div>
+											<div class="col-md-12"> 
+												<div class="form-group">
+													<input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" style="border-radius:8px;">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Se connecter" class="btn btn-primary">
+												</div>
+												<a href="{{ url_for('main.index') }}" class="text-align: center; text-decoration:none;">Retour à la page d'acceuil</a>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{{ url_for('static', filename='login/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='login/js/popper.js') }}"></script>
+  <script src="{{ url_for('static', filename='login/js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='login/js/jquery.validate.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='login/js/main.js') }}"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="{{ url_for('static', filename='assets/') }}" data-template="vertical-menu-template-free">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Add Manager - Dashboard admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/favicon/favicon.ico') }}" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/fonts/boxicons.css') }}" />
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/demo.css') }}" />
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+    <style>
+        .form-container {
+            max-width: 400px; /* Reduced width for a more compact form */
+            margin: 40px auto; /* Increased margin for better centering and spacing */
+            padding: 30px; /* Enhanced padding for a better layout */
+            background: #ffffff; /* Light background for the form */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+            border: 1px solid #dce4e8; /* Soft border */
+        }
+    
+       
+            
+        .card {
+            /* Remove or comment out properties related to the header if you no longer need them */
+            /* ... */
+            background-image: url('static/index/images/bg_2.jpg'); /* Path to your image */
+            background-size: cover; /* Ensure the image covers the whole card */
+            background-position: center center; /* Center the image */
+            border-radius: 10px; /* If you want rounded corners */
+        }
+        
+        /* If you still need the header text but styled differently, you can implement it within the form itself as a title */
+        .form-container h2.form-title {
+            font-size: 2rem; /* Adjust the size as needed */
+            font-weight: 600; /* A balanced weight for headings */
+            color: #0056b3; /* This should match your button or theme color */
+            padding-bottom: 1rem; /* Adds space below the title */
+            margin-bottom: 2rem; /* Extra space to separate from form fields */
+            border-bottom: 2px solid #dce4e8; /* A subtle line to distinguish the title area */
+            text-align: center; /* Center the title */
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Optional text shadow for depth */
+        }
+        
+    
+    
+        .btn-primary {
+            background-color: #0056b3; /* Darker blue for primary button */
+            border-color: #004085; /* Border color match */
+        }
+    
+        .btn-secondary {
+            background-color: #6c757d; /* Standard gray for secondary button */
+            border-color: #545b62; /* Matching border */
+        }
+    
+        input[type="text"], input[type="email"] {
+            border-radius: 5px; /* Slightly rounded edges for inputs */
+            border: 1px solid #ced4da; /* Soft border for inputs */
+        }
+    </style>
+    
+    
+    
+</head>
+<body>
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <!-- Sidebar -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo">
+                    <a href="{{ url_for('main.dashboard') }}" >
+                        <span class="app-brand-text demo menu-text fw-bolder ms-2" style="text-transform: none; text-align: center;">CarQuest</span>
+                    </a>
+                    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                        <i class="bx bx-chevron-left bx-sm align-middle"></i>
+                    </a>
+                </div>
+                <div class="menu-inner-shadow"></div>
+                <ul class="menu-inner py-1">
+                    <!-- Dashboard -->
+                    <li class="menu-item active">
+                        <a href="{{ url_for('main.dashboard') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                            <div data-i18n="Analytics">Dashboard</div>
+                        </a>
+                    </li>
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Managers</span></li>
+                    <!-- List Managers -->
+                    <li class="menu-item">
+                        <a href="{{ url_for('main.show_manager') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-user"></i>
+                            <div data-i18n="Tables">Liste des managers</div>
+                        </a>
+                    </li>
+                    <!-- Add Manager -->
+                    <li class="menu-item">
+                        <a href="{{ url_for('main.add_manager') }}" class="menu-link"> <!-- Assuming this should link to a route to add managers -->
+                            <i class="menu-icon tf-icons bx bx-user-plus"></i>
+                            <div data-i18n="Tables">Ajouter Manager</div>
+                        </a>
+                    </li>
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Déconnexion</span></li>
+                    <!-- Log Out -->
+                    <li class="menu-item">
+                        <a href="{{ url_for('main.logout') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-power-off"></i>
+                            <span class="align-middle">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </aside>
+            <!-- / Menu -->
+            <!-- Layout container -->
+            <div class="layout-page">
+                <!-- Navbar -->
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                            <i class="bx bx-menu bx-sm"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                        <!-- Search -->
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item d-flex align-items-center">
+                                <h5 class="mb-0">Tableau de bord de gestion</h5>
+                            </div>
+                        </div>
+                        <!-- /Search -->
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <!-- Place this tag where you want the button to render. -->
+                            <li class="nav-item lh-1 me-3">
+                                <a>{{ session.email if 'email' in session else 'No Email Available' }}</a>
+                            </li>
+                            <!-- User -->
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="{{ url_for('static', filename='assets/img/avatars/1.png') }}" alt class="w-px-40 h-auto rounded-circle" />
+                                    </div>
+                                </a>
+                            </li>
+                            <!--/ User -->
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <!-- Content -->
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div id="messageArea" class="alert" style="display: none;"></div>
+                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Gestion Manager /</span> Ajouter Manager</h4>
+                        <div class="card">
+                            
+                            <div class="card-body">
+                                <div class="form-container">
+                                   
+                                    <form action="{{ url_for('main.add_manager') }}" method="POST" id="addManagerForm">
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="nom" class="form-label">Nom</label>
+                                            <input type="text" class="form-control" id="nom" name="nom" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="prenom" class="form-label">Prénom</label>
+                                            <input type="text" class="form-control" id="prenom" name="prenom" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="mdp" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="mdp" name="mdp" required>
+                                        </div>
+                                        <a href="{{ url_for('main.show_manager') }}" class="btn btn-secondary">Cancel</a>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- / Content -->
+                </div>
+                <!-- / Content wrapper -->
+            </div>
+            <!-- / Layout page -->
+        </div>
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS and other scripts -->
+    <script src="{{ url_for('static', filename='assets/vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#addManagerForm').on('submit', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $('#messageArea').text('Manager ajouté avec succès!').addClass('alert-success').show();
+                        // Optionally, you can redirect the user after a delay
+                        setTimeout(function() {
+                            window.location.href = "{{ url_for('main.show_manager') }}";
+                        }, 3000); // Redirect after 3 seconds (3000 milliseconds)
+                    },
+                    error: function() {
+                        $('#messageArea').text('Erreur lors de l\'ajout du manager, veuillez réessayer.').addClass('alert-danger').show();
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="{{ url_for('static', filename='assets/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/js/menu.js') }}"></script>
+    <!-- endbuild -->
+</body>
+</html>

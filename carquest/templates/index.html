@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CarQuest</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/jquery.timepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index/css/style.css') }}">
+    
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="{{ url_for('main.index') }}">Car<span>Quest</span></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{{ url_for('main.index') }}" class="nav-link">Acceuil</a></li>
+	          <li class="nav-item"><a href="#voiture" class="nav-link">Voitures</a></li>
+	          <li class="nav-item"><a href="#about" class="nav-link">A Propos</a></li>
+	          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="#footer" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="{{ url_for('main.login') }}" class="nav-link">Se connecter</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('/static/index/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+          <div class="col-lg-8 ftco-animate">
+          	<div class="text w-100 text-center mb-md-5 pb-md-5">
+	            <h1 class="mb-4">Un moyen rapide et facile de louer une voiture</h1>
+	            <p style="font-size: 18px;">Bienvenue dans l'espace CarQuest, dédié pour la gestion de la location de voitures !</p>
+	            <a href="{{ url_for('main.login') }}" class="icon-wrap d-flex align-items-center mt-4 justify-content-center">
+	            	<div class="icon d-flex align-items-center justify-content-center">
+	            		<span class="ion-ios-play"></span>
+	            	</div>
+	            	<div class="heading-title ml-5">
+		            	<span>Louer une voiture</span>
+	            	</div>
+	            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <section class="ftco-section ftco-no-pt bg-light">
+    	<div class="container">
+    		<div class="row no-gutters">
+    			<div class="col-md-12	featured-top">
+    				<div class="row no-gutters">
+	  					<div class="col-md-4 d-flex align-items-center">
+	  						<form action="#" class="request-form ftco-animate bg-primary">
+		          		<h2>CarQuest</h2>
+                  <p style="text-align: justify;">Bienvenue sur CarQuest, votre partenaire de confiance pour la gestion de location de
+                    voitures ! Que vous soyez un manager ou un admin, notre plateforme a été 
+                    conçue pour répondre à tous vos besoins en matière de réservation et de gestion de 
+                    véhicules. Avec CarQuest, la réservation de votre voiture idéale devient une tâche aisée, 
+                    vous permettant de vous concentrer sur ce qui compte vraiment.</p>
+			            <div class="form-group">
+                    <p><a href="{{ url_for('main.login') }}" class="btn btn-secondary py-3 px-4">Se connecter</a></p>
+			            </div>
+			    			</form>
+	  					</div>
+	  					<div class="col-md-8 d-flex align-items-center">
+	  						<div class="services-wrap rounded-right w-100">
+	  							<h3 class="heading-section mb-4">Méthode simple pour louer une voiture au client</h3>
+	  							<div class="row d-flex mb-4">
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="services w-100 text-center">
+				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+				              	<div class="text w-100">
+					                <h3 class="heading mb-2">Choisir le prix de location</h3>
+				                </div>
+					            </div>      
+					          </div>
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="services w-100 text-center">
+				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span></div>
+				              	<div class="text w-100">
+					                <h3 class="heading mb-2">Choisir le client concerné</h3>
+					              </div>
+					            </div>      
+					          </div>
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="services w-100 text-center">
+				              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span></div>
+				              	<div class="text w-100">
+					                <h3 class="heading mb-2">Réserver la voiture correspondante</h3>
+					              </div>
+					            </div>      
+					          </div>
+					        </div>
+					        <p><a href="{{ url_for('main.login') }}" class="btn btn-primary py-3 px-4">Réserver les voitures</a></p>
+	  						</div>
+	  					</div>
+	  				</div>
+				</div>
+  		</div>
+    </section>
+
+
+    <section class="ftco-section ftco-no-pt bg-light" id="voiture">
+    	<div class="container">
+    		<div class="row justify-content-center">
+          <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+          	<span class="subheading">Voitures</span>
+            <h2 class="mb-2">Véhicules Disponibles</h2>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-12">
+    				<div class="carousel-car owl-carousel">
+    					<div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url('/static/index/images/car-1.jpg');">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Mercedes</span>
+			    						<!-- <p class="price ml-auto">Prix raisonnables</p> -->
+		    						</div>
+                    <p class="d-flex mb-0 d-block"><a href="{{ url_for('main.login') }}" class="btn btn-primary py-2 mr-1 w-100">Réserver au client</a></p>
+		    					</div>
+		    				</div>
+    					</div>
+    					<div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url('/static/index/images/car-2.jpg');">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Range Rover</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Range Rover</span>
+			    						<!-- <p class="price ml-auto">Prix raisonnables</p> -->
+		    						</div>
+                    <p class="d-flex mb-0 d-block"><a href="{{ url_for('main.login') }}" class="btn btn-primary py-2 mr-1 w-100">Réserver au client</a></p>
+		    					</div>
+		    				</div>
+    					</div>
+    					<div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url('/static/index/images/car-3.jpg');">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Porsche</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Porsche</span>
+			    						<!-- <p class="price ml-auto">Prix raisonnables</p> -->
+		    						</div>
+                    <p class="d-flex mb-0 d-block"><a href="{{ url_for('main.login') }}" class="btn btn-primary py-2 mr-1 w-100">Réserver au client</a></p>
+		    					</div>
+		    				</div>
+    					</div>
+    					<div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url('/static/index/images/car-4.jpg');">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Tesla</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Tesla</span>
+			    						<!-- <p class="price ml-auto">Prix raisonnables</p> -->
+		    						</div>
+                    <p class="d-flex mb-0 d-block"><a href="{{ url_for('main.login') }}" class="btn btn-primary py-2 mr-1 w-100">Réserver au client</a></p>
+		    					</div>
+		    				</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-about" id="about">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('/static/index/images/about.jpg');">
+					</div>
+					<div class="col-md-6 wrap-about ftco-animate">
+	          <div class="heading-section heading-section-white pl-md-5">
+	          	<span class="subheading">A propos</span>
+	            <h2 class="mb-4">Bienvenue sur CarQuest</h2>
+	            <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p> -->
+              <p style="text-align: justify;">CarQuest, un espace digital dédié pour la gestion de la location de voitures, où nous mettons un point d'honneur à vous offrir une expérience de location exceptionnelle.</p>
+              <p style="text-align: justify;">Aussi, CarQuest est une plateforme numérique exclusive dédiée à la gestion complète de la location de voitures. Notre engagement va au-delà de simplement fournir une expérience de location exceptionnelle. Nous mettons à la disposition des gestionnaires et des administrateurs des outils avancés leur permettant de gérer efficacement toutes les facettes de l'entreprise. En plus de garantir une expérience client sans pareille, notre système permet aux managers et aux admins de gérer les réservations et les facturations des clients de manière efficiente, offrant ainsi une gestion complète et transparente de l'ensemble du processus de location.</p>
+	            <p><a href="#services" class="btn btn-primary py-3 px-4">Découvrir les services</a></p>
+	          </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section" id="services">
+			<div class="container">
+				<div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Services</span>
+            <h2 class="mb-3">Nos Services</h2>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="services services-2 w-100 text-center">
+            	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car"></span></div>
+            	<div class="text w-100">
+                <h3 class="heading mb-2">Gestion de réservations</h3>
+                <p>Utiliser un système informatisé de suivi des disponibilités, des demandes et des confirmations.</p>
+              </div>
+            </div>
+					</div>
+					<div class="col-md-3">
+						<div class="services services-2 w-100 text-center">
+            	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-transportation"></span></div>
+            	<div class="text w-100">
+                <h3 class="heading mb-2">Gestion de factures</h3>
+                <p>Calculer les coûts correctement et générer des factures détaillées pour chaque client.</p>
+              </div>
+            </div>
+					</div>
+					<div class="col-md-3">
+						<div class="services services-2 w-100 text-center">
+            	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car"></span></div>
+            	<div class="text w-100">
+                <h3 class="heading mb-2">Gestion des clients</h3>
+                <p>Offrir un service personnalisé et maintenir une communication efficace pour la satisfaction continue.</p>
+              </div>
+            </div>
+					</div>
+					<div class="col-md-3">
+						<div class="services services-2 w-100 text-center">
+            	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-transportation"></span></div>
+            	<div class="text w-100">
+                <h3 class="heading mb-2">Gestion des voitures</h3>
+                <p>Suivre l'état, l'emplacement et l'historique de chaque véhicule, pour assurer la disponibilité des voitures en bon état.</p>
+              </div>
+            </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-intro" style="background-image: url('/static/index/images/bg_3.jpg')">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-end">
+					<div class="col-md-6 heading-section heading-section-white ftco-animate">
+            <h2 class="mb-3">C'est le moment de se connecter pour gérer.</h2>
+            <a href="{{ url_for('main.login') }}" class="btn btn-primary btn-lg">Se connecter</a>
+          </div>
+				</div>
+			</div>
+		</section>
+
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Retours Positifs</span>
+            <h2 class="mb-3">Clients Satisfaits</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('/static/index/images/person_1.jpg')">
+                  </div> 
+                  <div class="text pt-4">
+                    <p class="mb-4">Je recommande vivement cette agence de location de voitures à tous ceux qui recherchent un service de qualité.</p>
+                    <p class="name">Antoine Leroy</p>
+                    <!-- <span class="position">Client Satisfait</span> -->
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('/static/index/images/person_2.jpg')">
+                  </div> 
+                  <div class="text pt-4">
+                    <p class="mb-4">Je suis un client fidèle depuis des années, et je n'ai jamais été déçu. Leur système de réservation est simple et efficace.</p>
+                    <p class="name">Julien Martin</p>
+                    <!-- <span class="position">Client Satisfait</span> -->
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('/static/index/images/person_3.jpg')">
+                  </div> 
+                  <div class="text pt-4">
+                    <p class="mb-4">Le véhicule que j'ai loué était en excellent état. Ils ont rendu le processus de location facile et sans stress.</p>
+                    <p class="name">Lucas Moreau</p>
+                    <!-- <span class="position">Client Satisfait</span> -->
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('/static/index/images/person_4.jpg')">
+                  </div> 
+                  <div class="text pt-4">
+                    <p class="mb-4">Je recommande vivement cette agence à tous ceux qui recherchent une location de voiture sans stress ni problème.</p>
+                    <p class="name">Nicolas Dupont</p>
+                    <!-- <span class="position">Client Satisfait</span> -->
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('/static/index/images/person_5.jpeg')">
+                  </div> 
+                  <div class="text pt-4">
+                    <p class="mb-4">Je voyage fréquemment pour le travail et je choisis toujours cette agence pour mes besoins de location de voiture.</p>
+                    <p class="name">Olivier Rousseau</p>
+                    <!-- <span class="position">Client Satisfait</span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section" id="footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>Quest</span></a></h2>
+              <p style="text-align: justify;">CarQuest, un espace digital dédié pour la gestion de la location de voitures, où votre location est notre priorité.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="{{ url_for('main.index') }}"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="{{ url_for('main.index') }}"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="{{ url_for('main.index') }}"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Liens Utiles</h2>
+              <ul class="list-unstyled">
+                <li><a href="{{ url_for('main.index') }}" class="py-2 d-block">Acceuil</a></li>
+                <li><a href="#about" class="py-2 d-block">A Propos</a></li>
+                <li><a href="#services" class="py-2 d-block">Services</a></li>
+                <li><a href="#voiture" class="py-2 d-block">Voitures</a></li>
+                <li><a href="#footer" class="py-2 d-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Plus d'informations</h2>
+              <ul class="list-unstyled">
+                <li><a href="{{ url_for('main.index') }}" class="py-2 d-block">FAQ</a></li>
+                <li><a href="{{ url_for('main.index') }}" class="py-2 d-block">Paiements</a></li>
+                <li><a href="{{ url_for('main.index') }}" class="py-2 d-block">Conseils</a></li>
+                <li><a href="{{ url_for('main.index') }}" class="py-2 d-block">Gestion</a></li>
+                <li><a href="{{ url_for('main.index') }}" class="py-2 d-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Avez-vous des questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">M'Hannech, Tétouan, 93000, Maroc</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+212 808-080808</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">contact@carquest.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> CarQuest
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{ url_for('static', filename='index/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/jquery.animateNumber.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/bootstrap-datepicker.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/jquery.timepicker.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/scrollax.min.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false"></script>
+  <script src="{{ url_for('static', filename='index/js/google-map.js') }}"></script>
+  <script src="{{ url_for('static', filename='index/js/main.js') }}"></script>  
+    
+  </body>
+</html>
