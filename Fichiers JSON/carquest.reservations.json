@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "662d9bef4066ba0c9fdf2824"
+  },
+  "id_reservation": 6,
+  "dateDebut": "2024-05-01",
+  "dateFin": "2024-05-05",
+  "id_client": "6625b2e41c8d594973d53e6a",
+  "id_voiture": "662d9bc94066ba0c9fdf2823",
+  "statut": "refusé"
+},
+{
+  "_id": {
+    "$oid": "66328de3a43f65a0cb0d2e8f"
+  },
+  "id_reservation": 10,
+  "dateDebut": "2024-05-31",
+  "dateFin": "2024-06-09",
+  "id_client": "662c2b1dab6f64f8971a0a8f",
+  "id_voiture": "66319b6fe6f7191493a0a021",
+  "statut": "confirmé"
+},
+{
+  "_id": {
+    "$oid": "663292960747c75c49a886e0"
+  },
+  "id_reservation": 11,
+  "dateDebut": "2024-06-01",
+  "dateFin": "2024-06-04",
+  "id_client": "66319c35e6f7191493a0a023",
+  "id_voiture": "662d9d624066ba0c9fdf2828",
+  "statut": "reserved"
+},
+{
+  "_id": {
+    "$oid": "66368772dc228de30e9be544"
+  },
+  "id_reservation": 15,
+  "dateDebut": "2024-06-01",
+  "dateFin": "2024-06-08",
+  "id_client": "6625b2e41c8d594973d53e6a",
+  "id_voiture": "662d9bc94066ba0c9fdf2823",
+  "statut": "confirmé"
+},
+{
+  "_id": {
+    "$oid": "66368e71412d8ca1bf73f40d"
+  },
+  "id_reservation": 16,
+  "dateDebut": "2024-05-15",
+  "dateFin": "2024-05-30",
+  "id_client": "66319324dedea8bba3d592fe",
+  "id_voiture": "66319b6fe6f7191493a0a021",
+  "statut": "reserved"
+}]

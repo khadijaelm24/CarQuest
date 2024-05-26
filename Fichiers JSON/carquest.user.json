@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "6621bbd5aa4775ec72a87417"
+  },
+  "email": "admin@gmail.com",
+  "mdp": "123",
+  "role": "admin"
+},
+{
+  "_id": {
+    "$oid": "6621bbd5aa4775ec72a87418"
+  },
+  "email": "imane@gmail.com",
+  "mdp": "0000",
+  "role": "manager"
+},
+{
+  "_id": {
+    "$oid": "663198a9e6f7191493a0a01d"
+  },
+  "email": "souadelyousfy@gmail.com",
+  "nom": "EL YOUSFY",
+  "prenom": "Souad",
+  "mdp": "123",
+  "role": "manager"
+},
+{
+  "_id": {
+    "$oid": "66319946e6f7191493a0a01e"
+  },
+  "email": "bouchra@gmail.com",
+  "nom": "Loukili",
+  "prenom": "Bouchra",
+  "mdp": "bouchra",
+  "role": "manager"
+},
+{
+  "_id": {
+    "$oid": "6635a49e3082e47a3aaa6a85"
+  },
+  "email": "khadja@gmail.com",
+  "nom": "El Madani",
+  "prenom": "Khadija",
+  "mdp": "khadija",
+  "role": "manager"
+},
+{
+  "_id": {
+    "$oid": "6635a5f9ba0b19110e319a58"
+  },
+  "email": "khadija@gmail.com",
+  "nom": "El Madani",
+  "prenom": "Khadija",
+  "mdp": "khadija",
+  "role": "manager"
+},
+{
+  "_id": {
+    "$oid": "6635a631ba0b19110e319a5a"
+  },
+  "email": "ilham@gmail.com",
+  "nom": "adbib",
+  "prenom": "ilham",
+  "mdp": "ilham",
+  "role": "manager"
+},
+{
+  "_id": {
+    "$oid": "6635a82e2a4f37dfad80eac9"
+  },
+  "email": "ilhama@gmail.com",
+  "nom": "adbib",
+  "prenom": "ilham",
+  "mdp": "ilham",
+  "role": "manager"
+}]

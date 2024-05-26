@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "662d9bc94066ba0c9fdf2823"
+  },
+  "id": 5,
+  "status": "available",
+  "fuel": "diesel",
+  "km": "345678",
+  "couleur": "green",
+  "marque": "Mercedes",
+  "modele": "2001",
+  "prix": "432",
+  "image": "car-5.jpg"
+},
+{
+  "_id": {
+    "$oid": "662d9d624066ba0c9fdf2828"
+  },
+  "id": 8,
+  "status": "available",
+  "fuel": "electric",
+  "km": "56789",
+  "couleur": "Black",
+  "marque": "Seat",
+  "modele": "2013",
+  "prix": "765",
+  "image": "car-5.jpg"
+},
+{
+  "_id": {
+    "$oid": "66319b6fe6f7191493a0a021"
+  },
+  "id": 12,
+  "status": "available",
+  "fuel": "diesel",
+  "km": "234567",
+  "couleur": "yellow",
+  "marque": "WolksWagen",
+  "modele": "2002",
+  "prix": "257",
+  "image": "car-5.jpg"
+}]

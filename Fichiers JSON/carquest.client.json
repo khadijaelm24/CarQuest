@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "6625b2e41c8d594973d53e6a"
+  },
+  "id": 1,
+  "email": "khadija@gmail.com",
+  "mdp": "123",
+  "nom": "EL MADANI",
+  "prenom": "Khadija",
+  "photo": "1.png",
+  "telephone": "0898080808",
+  "cin": "LE12345",
+  "adresse": "Martil"
+},
+{
+  "_id": {
+    "$oid": "662c2b1dab6f64f8971a0a8f"
+  },
+  "id": 2,
+  "email": "omar@gmail.com",
+  "mdp": "123",
+  "nom": "Lamrini",
+  "prenom": "Imane",
+  "photo": "1.png",
+  "telephone": "0627782454",
+  "cin": "LE12345",
+  "adresse": "Martil"
+},
+{
+  "_id": {
+    "$oid": "66319324dedea8bba3d592fe"
+  },
+  "id": 4,
+  "email": "ilham@gmail.com",
+  "mdp": "2345",
+  "nom": "adbib",
+  "prenom": "ilham",
+  "photo": "1.png",
+  "telephone": "0627782454",
+  "cin": "L123456",
+  "adresse": "Tetouan"
+},
+{
+  "_id": {
+    "$oid": "66319c35e6f7191493a0a023"
+  },
+  "id": 5,
+  "email": "bouchra@gmail.com",
+  "mdp": "123",
+  "nom": "Loukili",
+  "prenom": "Bouchra",
+  "photo": "1.png",
+  "telephone": "0707070708",
+  "cin": "A123456",
+  "adresse": "Rabat\n"
+},
+{
+  "_id": {
+    "$oid": "663294400747c75c49a886e1"
+  },
+  "id": 6,
+  "email": "yassin@gmail.com",
+  "mdp": "1234",
+  "nom": "EL YOUSFY",
+  "prenom": "Yassin",
+  "photo": "1.png",
+  "telephone": "0699887766",
+  "cin": "LE12345",
+  "adresse": "Martil"
+}]

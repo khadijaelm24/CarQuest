@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "66212dd70d48e7c2b3a5ae5e"
+  },
+  "id": null,
+  "date_location": null,
+  "date_retour": null,
+  "prix_par_jour": null,
+  "id_reservation": null,
+  "id_client": null,
+  "id_car": null
+}]
