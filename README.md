@@ -25,7 +25,7 @@ First, ensure that you have those tools installed and already setup:
 - **Visual Studio Code**.
 - **MongoDB Compass** (the database name is: <i>**carquest**</i>, which contains all collections as <i><a href="https://github.com/khadijaelm24/CarQuest/tree/main/Fichiers%20JSON">JSON Files<a></i>).
 
-And, clone the repository: `https://github.com/khadijaelm24/CarQuest.git`.
+And, clone the repository: `git clone https://github.com/khadijaelm24/CarQuest.git`.
 
 Then, ensure that you have installed all required Python installers, via this detailed <a href="https://github.com/khadijaelm24/CarQuest/blob/main/Guide%20de%20D%C3%A9ploiement%20de%20carquest.pdf">guide</a>
 
